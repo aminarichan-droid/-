@@ -1,0 +1,379 @@
+/* --- Сброс стилей и базовые настройки --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f6fc;
+    color: #333;
+}
+
+/* --- Переменные цветов --- */
+:root {
+    --primary-blue: #3b6eb5;
+    --light-blue: #b0cdea;
+    --bg-hero: #a4c7ea;
+    --text-dark: #2c3e50;
+    --border-color: #bfdbfe;
+    --button-hover: #2b5891;
+}
+
+/* --- Шапка (Header) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 24px;
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.logo-text {
+    font-weight: bold;
+    color: #1a497c;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.login-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.login-btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* --- Герой-секция (Hero) --- */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #9bc2e6 0%, #b8d4f0 100%);
+    padding: 60px 50px 150px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+    margin-bottom: -80px;
+    /* Закругление низа */
+    border-bottom-left-radius: 50% 100px;
+    border-bottom-right-radius: 50% 100px;
+}
+
+.hero-content {
+    max-width: 50%;
+    color: white;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.cta-btn {
+    background-color: #dceefb;
+    color: #2c6aab;
+    padding: 15px 60px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+    width: 400px;
+    height: 500px;
+    margin-bottom: -150px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    /* Если нужно убрать белый фон вокруг фото, если он есть */
+}
+
+/* --- Секция с фильтрами (Серый фон) --- */
+.filters-section {
+    background-color: #e6e9eb;
+    padding: 60px 50px 40px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.filter-btn {
+    border: 1px solid var(--primary-blue);
+    background: #ffffff;
+    min-width: 120px;
+    padding: 10px 24px;
+    border-radius: 5px;
+    color: var(--primary-blue);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* --- Главная страница --- */
+.home-content {
+    background-color: #dcecf7;
+    padding: 28px 50px 70px;
+}
+
+.home-content h2,
+.home-content p {
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-content h2 {
+    color: var(--primary-blue);
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.home-content p {
+    color: #111;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+/* --- Форма создания резюме --- */
+.resume-form-section {
+    background: linear-gradient(to bottom, #eef4f9, #dbe8f2);
+    padding: 50px 20px 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    width: 100%;
+    max-width: 900px;
+    color: var(--primary-blue);
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-container {
+    background-color: transparent;
+    width: 100%;
+    max-width: 900px;
+}
+
+.avatar-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.avatar-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #b2d3ed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.upload-text {
+    color: var(--primary-blue);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    color: #555;
+    outline: none;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px top 50%;
+    background-size: 12px auto;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group label {
+    color: #888;
+    font-size: 14px;
+}
+
+.submit-btn-wrapper {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 15px 80px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* --- Адаптивность для мобильных устройств --- */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 80px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-bottom: 0;
+    }
+    .hero-content {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero-image {
+        width: 200px;
+        height: 250px;
+        margin-bottom: -80px;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .filters-section {
+        padding: 20px;
+    }
+    .filter-buttons {
+        gap: 10px;
+    }
+    .filter-btn {
+        font-size: 12px;
+        min-width: 105px;
+        padding: 8px 12px;
+    }
+    .home-content {
+        padding: 24px 20px 48px;
+    }
+    .home-content h2 {
+        font-size: 18px;
+    }
+    .home-content p {
+        font-size: 14px;
+    }
+}
